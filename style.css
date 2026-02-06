@@ -1,49 +1,29 @@
-/* ===============================
-   ROOT VARIABLES (THEME SYSTEM)
-================================ */
-:root {
-  --bg-main: #f7f9f8;
-  --bg-card: #ffffff;
-  --primary: #1f7a63;
-  --secondary: #145a32;
-  --accent: #c8e6c9;
-
-  --edible: #2e7d32;
-  --medicinal: #1565c0;
-  --poisonous: #c62828;
-
-  --text-main: #1e1e1e;
-  --text-light: #5f6368;
-  --border: #e0e0e0;
-
-  --radius: 14px;
-  --shadow: 0 12px 30px rgba(0,0,0,0.08);
-}
-
-/* ===============================
+/* =========================
    GLOBAL RESET
-================================ */
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* =========================
+   BODY & TYPOGRAPHY
+========================= */
 body {
-  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
-  background: var(--bg-main);
-  color: var(--text-main);
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f5f8f7;
+  color: #222;
   line-height: 1.7;
 }
 
-/* ===============================
-   HEADER & NAVBAR
-================================ */
+/* =========================
+   HEADER & NAVIGATION
+========================= */
 header {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: white;
-  padding: 22px 40px;
-  box-shadow: var(--shadow);
+  background: linear-gradient(135deg, #1f7a63, #145a32);
+  color: #fff;
+  padding: 22px;
 }
 
 header h1 {
@@ -53,155 +33,142 @@ header h1 {
 
 nav {
   display: flex;
-  gap: 24px;
+  gap: 18px;
+  flex-wrap: wrap;
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  font-weight: 500;
-  opacity: 0.9;
-  transition: opacity 0.2s ease;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
 }
 
 nav a:hover {
-  opacity: 1;
-  text-decoration: underline;
+  background: rgba(255, 255, 255, 0.2);
 }
 
-/* ===============================
-   MAIN CONTENT
-================================ */
+/* =========================
+   MAIN CONTENT (ALL PAGES)
+========================= */
 .content {
   max-width: 1100px;
-  margin: 50px auto;
+  margin: 40px auto;
   padding: 0 20px;
 }
 
 .content h2 {
-  font-size: 1.6rem;
-  margin-bottom: 15px;
-  color: var(--secondary);
+  color: #145a32;
+  margin: 25px 0 12px;
 }
 
-.content p,
-.content li {
-  color: var(--text-light);
-  font-size: 1rem;
+.content p {
+  margin-bottom: 15px;
 }
 
 .content ul {
-  padding-left: 20px;
-  margin-bottom: 25px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
-/* ===============================
-   CARD GRID
-================================ */
+.content ul li {
+  margin-bottom: 6px;
+}
+
+/* =========================
+   CARDS (USED ANYWHERE)
+========================= */
 .cards {
-  max-width: 1100px;
-  margin: 60px auto;
-  padding: 0 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+  margin-top: 25px;
 }
 
 .card {
-  background: var(--bg-card);
-  padding: 28px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
 }
 
 .card h3 {
   margin-bottom: 10px;
-}
-
-.card p {
-  margin-bottom: 18px;
+  color: #1f7a63;
 }
 
 .card a {
   display: inline-block;
-  text-decoration: none;
-  font-weight: 600;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: #1f7a63;
   color: white;
-  padding: 10px 18px;
-  border-radius: 30px;
-  background: var(--primary);
-}
-
-/* ===============================
-   CATEGORY COLORS
-================================ */
-.edible { border-left: 6px solid var(--edible); }
-.medicinal { border-left: 6px solid var(--medicinal); }
-.poisonous { border-left: 6px solid var(--poisonous); }
-
-/* ===============================
-   INFO LISTS
-================================ */
-.content ul li {
-  margin-bottom: 8px;
-}
-
-/* ===============================
-   WARNING & ALERTS
-================================ */
-.warning {
-  background: #ffebee;
-  color: #b71c1c;
-  padding: 18px 22px;
-  border-left: 6px solid var(--poisonous);
-  border-radius: var(--radius);
-  margin: 30px 0;
+  text-decoration: none;
+  border-radius: 20px;
   font-weight: 600;
 }
 
-/* ===============================
-   BUTTONS & LINKS
-================================ */
-a {
-  color: var(--primary);
+.card a:hover {
+  background: #145a32;
 }
 
-a:hover {
-  color: var(--secondary);
+/* =========================
+   WARNING / SAFETY BOX
+========================= */
+.warning {
+  background: #ffecec;
+  color: #8b0000;
+  border-left: 6px solid #c62828;
+  padding: 14px 18px;
+  margin: 25px 0;
+  border-radius: 8px;
+  font-weight: 600;
 }
 
-/* ===============================
-   FOOTER
-================================ */
+/* =========================
+   FOOTER (ALL PAGES)
+========================= */
 footer {
-  margin-top: 80px;
-  padding: 30px;
+  margin-top: 60px;
   background: #0f3d2e;
-  color: #dceee8;
+  color: #e0f2ee;
   text-align: center;
+  padding: 22px;
   font-size: 0.95rem;
 }
 
-/* ===============================
+/* =========================
+   LINKS (GLOBAL)
+========================= */
+a {
+  color: #1f7a63;
+}
+
+a:hover {
+  color: #145a32;
+}
+
+/* =========================
    RESPONSIVE DESIGN
-================================ */
+========================= */
 @media (max-width: 768px) {
-  header {
-    padding: 20px;
+  header h1 {
+    font-size: 1.5rem;
   }
 
   nav {
-    flex-wrap: wrap;
-    gap: 14px;
+    gap: 10px;
   }
 
   .content {
-    margin: 30px auto;
+    margin: 25px auto;
   }
 }
