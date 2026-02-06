@@ -1,15 +1,43 @@
-# Mushroom Knowledge Hub 🍄
+# 🍄 Mushroom Knowledge Hub
 
-Educational + Farming + Safety website about mushrooms.
+**Educational + Farming + Safety** website about mushrooms.
 
-## Features
-- Edible, Medicinal & Poisonous mushrooms
-- Cultivation guide
+---
+
+## 🌱 About the Project
+
+Mushroom Knowledge Hub is a beginner-friendly web project that provides
+reliable information on:
+
+- Edible mushrooms
+- Medicinal mushrooms
+- Poisonous mushrooms
+- Cultivation techniques
 - Disease & pest control
-- Beginner-friendly HTML/CSS/JS
 
-## Live Website
-https://yourusername.github.io/mushroom-knowledge-hub/
+Built using **HTML, CSS, and JavaScript**.
 
-## Warning
-Do not consume wild mushrooms without expert identification.
+---
+
+## ✨ Features
+
+- 🍽️ Edible, Medicinal & Poisonous mushrooms
+- 🌾 Step-by-step cultivation guide
+- 🦠 Disease & pest control information
+- ⚠️ Strong safety warnings
+- 🎨 Premium modern UI
+- 🚀 Hosted on GitHub Pages
+
+---
+
+## 🌍 Live Website
+
+🔗 **Visit here:**  
+https://<YOUR_GITHUB_USERNAME>.github.io/mushroom-knowledge-hub/
+
+> Replace `<YOUR_GITHUB_USERNAME>` with your actual username
+
+---
+
+## 📂 Project Structure
+
